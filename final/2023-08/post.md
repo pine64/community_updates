@@ -10,12 +10,24 @@ N.B. Comments on the blog post need to be in English and follow our [Community R
 ## TL;DR
 
 * Housekeeping
-    * The new way community updates are written
+    * Community updates are now written collaboratively by several members of the community
+    * The public is invited to contribute to the monthly update posts
 * Newsflash
 * Quartz64 and SOQuartz
     * U-Boot improvements thanks to Kwiboo and CounterPillow: USB, NVMe, and soon PXE
     * Improved SOQuartz CM4 baseboard compatibility
     * Improved PCIe devices compatibility
+
+
+## Housekeeping
+
+You might have been wondering why nothing new has been posted on the PINE64.org community blog in quite a few months. As was already revealed in the opening section, the reason is that previously blogs were mainly authored and edited by one person (Lukasz) and said person is extremely busy these days.
+
+Going forward, these monthly community update posts will be written collaboratively by the community for the community. To that end, there is now a [Git repository](https://github.com/pine64/community_updates) through which this work happens. You don't need to be a good writer to contribute, you can submit links or short bullet lists and the editors will take care of the rest.
+
+The plan is to have a post out on the 15th of every month. Whether or not this deadline will be met each month is another question, but now you can keep an eye on what's happening behind the curtains and help out if necessary.
+
+Speaking of deadlines, this update didn't have a very long time in the proverbial oven despite the long period of silence preceding it, so it may be a little short or not cover all developments in the community equally well. Just because something is not covered in this post doesn't mean it hasn't been worked on.
 
 
 ## Quartz64 and SOQuartz

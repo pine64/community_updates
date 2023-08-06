@@ -1,5 +1,3 @@
-Talk about the new way community updates are written, who's involved, etc. Link to the repo to contribute, specify what day of the month updates are scheduled to be published now.
-
 Write about megi's rk2aw: https://xnux.eu/rk2aw/
 
 Infinitime 1.13: huge battery life improvements, better heart rate processing algorithm, new memory management: https://github.com/InfiniTimeOrg/InfiniTime/releases/tag/1.13.0
