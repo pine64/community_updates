@@ -89,13 +89,15 @@ submissions may be included in the next month's community update instead.
 ## Licensing
 
 By submitting to this repository, you agree that you have the necessary rights
-to submit your contributions and grant us a permanent, irrevocable license to
-adapt, feature and distribute your submission on or through the PINE64 blog as
-part of a community update, as well as produce and distribute video and audio
-adaptations of your contributions for the purpose of creating PINE64 community
-update videos and PINE64 podcasts.
+to submit your contributions and grant us a perpetual, irrevocable, royalty-free
+license to adapt, feature and distribute your submission on or through the
+PINE64.org website as part of a community update, as well as produce and
+distribute video and audio adaptations of your contributions for the purpose of
+creating PINE64 community update videos and PINE64 podcasts.
 
-You also grant a permanent, irrevocable license to have your contribution be
-distributed as part of this repository.
+You also grant a perpetual, irrevocable, royalty-free license to have your
+contribution be distributed as part of this repository, and have it be modified
+or adapted into different forms for the purposes of creating PINE64 community
+updates.
 
 Contributors retain the copyrights to their own contributions.
