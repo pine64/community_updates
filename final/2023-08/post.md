@@ -89,7 +89,7 @@ The heart rate sensor is integrated in InfiniTime for quite some time now (since
 
 Here's a video I shot when I was testing this PR. It compares the HR implementation of InfiniTime 1.11 (sealed PineTime on the left) with the new one (devkit on the right).
 
-<video src="https://github.com/pine64/community_updates/blob/main/final/2023-08/images/hr-comparison.mp4"></video>
+https://github.com/pine64/community_updates/assets/31677287/65f86b76-b362-4102-be37-b6f347ad7d8e
 
 Did you know that InfiniTime implements a BLE weather service since [InfiniTime 1.8.0](https://github.com/InfiniTimeOrg/InfiniTime/releases/tag/1.8.0) ? This service allows companion apps to send weather forecast to the watch. Since then, all we were missing was a nice UI to display those information. Thanks to [Kieran](https://github.com/kieranc), the author of the PineTimeStyle watch face, weather forecast can now be displayed in PTS.
 
