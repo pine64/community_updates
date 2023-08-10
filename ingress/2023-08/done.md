@@ -6,6 +6,8 @@ SOQuartz CM4 compatibility improvements: https://fratti.ch/articles/posts/fixing
 
 Talk about the new way community updates are written, who's involved, etc. Link to the repo to contribute, specify what day of the month updates are scheduled to be published now.
 
+JF wrote about the large amount of updates that have occured over the months from the last community update to the PineTime and it's firmware InfiniTime. Things like heart rate monitoring, memory management, battery life, InfiniSim and ITD had major updates during this time. Along with Ayke starting development on their own firmware
+
 ## QuartzPro64
 
 * Collabora's mainlining efforts on RK3588
@@ -26,3 +28,12 @@ Talk about the new way community updates are written, who's involved, etc. Link 
 Explain what we mean by "mainlining".
 
 Mention that this is paving the way for future RK3588-based Pine products.
+
+## PineTime/InfiniTime
+* Heart rate monitoring improvements thanks to Ceimour!
+* Did you know that InfiniTime has a BLE weather service feature?
+* Improved memory management
+* Huge improvements to battery life (with help from Ayke!)
+* InfiniSim UI update
+* Improvements to ITD, the InfiniTime daemon
+* Ayke is developing a brand new firmware for the PineTime

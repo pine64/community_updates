@@ -21,6 +21,14 @@ N.B. Comments on the blog post need to be in English and follow our [Community R
     * What it means to "mainline" things, and why it takes time
     * Things that have been mainlined: SATA, PCIe, USB, AV1, and more!
     * Things still being worked on: cpufreq, GPU, video output
+* InfiniTime 1.13 and other PineTime news
+    * Heart rate monitoring improvements thanks to Ceimour!
+    * Did you know that InfiniTime has a BLE weather service feature?
+    * Improved memory management
+    * Huge improvements to battery life (with help from Ayke!)
+    * InfiniSim UI update
+    * Improvements to ITD, the InfiniTime daemon
+    * Ayke is developing a brand new firmware for the PineTime
 
 
 ## Housekeeping
@@ -72,3 +80,57 @@ Speaking of such products, the reason why we haven't seen a consumer version of 
 Also missing is support for video output. This is separate from the 3D GPU, as the video output processor is a Rockchip-specific hardware implementation. This means that for the time being, serial and networking are still the only ways to interact with the board.
 
 Speaking of the 3D GPU though, the RK3588's GPU is a licensed design from Arm. Collabora is working hard on adding support for it in an open-source driver in Linux, which includes writing a new kernel driver. You can read about this driver, called pancsf, in [Collabora's blog post on the matter](https://www.collabora.com/news-and-blog/news-and-events/pancsf-a-new-drm-driver-for-mali-csf-based-gpus.html). The new architecture of the Mali-G610 GPU will allow for a fully featured Vulkan driver to be written for it in the future, something older generations of Mali GPUs had to awkwardly emulate parts of.
+
+# InfiniTime 1.13 and other PineTime news
+
+The InfiniTime team released InfiniTime 1.13 at the end of June. If you haven't updated your PineTime yet, I strongly suggest you do it ASAP since it brings many nice features : new heart rate algorithm, weather integration in PineTimeStyle (PTS) watch face, new memory management, and (much) improved battery life! Let's dive into the details of this release!
+
+The heart rate sensor is integrated in InfiniTime for quite some time now (since [0.11.0](https://github.com/InfiniTimeOrg/InfiniTime/releases/tag/0.11.0), actually). It worked but fine but... we had the feeling that it could work better if someone had the opportunity to have a look at the code. [Ceimour](https://github.com/Ceimour) did a great job redesigning and mostly rewriting the whole heart rate processing algorithm. I'm not experienced enough in digital signal processing to explain all the internals of this new algorithm, so, if you are interested in the details, please see the explanations Ceimour provided in the PR [here](https://github.com/InfiniTimeOrg/InfiniTime/pull/1486#issuecomment-1353695831https://github.com/InfiniTimeOrg/InfiniTime/pull/1486#issuecomment-1353695831) and [here](https://github.com/InfiniTimeOrg/InfiniTime/pull/1486#issuecomment-1377673396). All in all, it now takes less time to display the first measurements, and they are now updated much faster than previously. 
+
+Here's a video I shot when I was testing this PR. It compares the HR implementation of InfiniTime 1.11 (sealed PineTime on the left) with the new one (devkit on the right).
+
+<video src="https://github.com/pine64/community_updates/blob/main/final/2023-08/images/hr-comparison.mp4"></video>
+
+Did you know that InfiniTime implements a BLE weather service since [InfiniTime 1.8.0](https://github.com/InfiniTimeOrg/InfiniTime/releases/tag/1.8.0) ? This service allows companion apps to send weather forecast to the watch. Since then, all we were missing was a nice UI to display those information. Thanks to [Kieran](https://github.com/kieranc), the author of the PineTimeStyle watch face, weather forecast can now be displayed in PTS.
+
+![PTS settings](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/pts-weather-settings.jpg)![PTS weather](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/pts-weather.jpg)
+
+This integration currently works with [Gadgetbridge](https://codeberg.org/Freeyourgadget/Gadgetbridge/) and [ITD](https://gitea.elara.ws/Elara6331/itd). You'll find documentation about the PTS watchface [here](https://wiki.pine64.org/wiki/PineTimeStyle) and about the weather integration [here](https://wiki.pine64.org/wiki/Infinitime-Weather).
+
+*However, since the release, several users reported that the new weather feature might cause some instabilities in InfinITime : crash, unexpected reboot and font corruption. You can read more about this issue [here](https://github.com/InfiniTimeOrg/InfiniTime/issues/1788). If you are impacted, I would suggest you disable the weather feature from your companion app until we implement a fix.*
+
+Memory management is a important topic for the InfiniTime developers. The PineTime only has 64KB of RAM memory available and we have to use it wisely. We also try to optimize the memory usage of the firmware so that we can continue to add new features in InfiniTime. And the new memory management aka "the heaps unification" is one of these optimizations.
+
+Without going into [too much details](https://github.com/InfiniTimeOrg/InfiniTime/discussions/1569), we figured that the RAM memory in InfiniTime was split into 4 parts : the memory that is statically allocated at build time, and 3 regions that are used to dynamically allocate memory at runtime. Those 3 regions (or heaps) are managed by LVGL (the UI library), FreeRTOS (the OS InfiniTime is based on) and the standard C++ library. The goal of this change was to unify those 3 heaps into a single one (the one managed by FreeRTOS). This allows to reduce the overhead generated by those 3 heaps and it also give us a better overview of how the memory is actually used and how much memory is still available.
+
+![memory.jpg](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/memory.jpg)
+
+Pine64 advertise the PineTime with a "week-long battery life" and they are correct : the hardware is perfectly capable of achieving that. And InfiniTime isn't too far off the mark : in my use case (BLE and wrist wake option enabled), I usually need to recharge my PineTime every 3 to 5 days, and the battery life can be extended by disabling wake options and BLE.
+
+We were however pretty sure that we could achieve [better results](https://github.com/InfiniTimeOrg/InfiniTime/issues/53) with some optimizations that consist mostly in disabling most of the parts of the MCU when it's idle. 
+
+Recently, Ayke ([GitHub](https://github.com/aykevl), [Mastodon](https://hachyderm.io/@ayke)) shared their findings and measurements regarding power usage of the PineTime on [the wiki](https://wiki.pine64.org/wiki/PineTime#Reducing_power_consumption) and with [the InfiniTime community on GitHub](https://github.com/InfiniTimeOrg/InfiniTime/issues/53#issuecomment-1511657606) : they optimized their firmware to reduce the power usage down to 66µA. With such power usage, the PineTime could run for more than 3 months on a single charge! Obviously, to reach such power consumption, most of the device is put in sleep mode, but that's a great achievement knowing that, for example InfiniTime uses [1.1mA in sleep mode with BLE enabled](https://github.com/InfiniTimeOrg/InfiniTime/discussions/1420#discussion-4542610)!
+
+So we tried to apply Ayke's suggestions in InfiniTime, and the results were also really good : we went from 890µA in sleep mode down to ~200µA with BLE enabled! And a bit less with BLE disabled!
+
+![](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/infinitime-power-usage.png)
+
+Most of those changes are now integrated in InfiniTime 1.13, and a many users have already reported between 10 days and nearly 20 days of battery life (depending on the features that are enabled : wake up options, BLE, display timeout,...)! My PineTime worked for just over 16 days in my normal use! I'm honestly impressed by those results, and I hope you'll also notice an nice increase in the battery life of your PineTime!
+
+![](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/battery-report.png)
+
+## Ohter news from the PineTime community
+
+Since we haven't been able to publish a Pine64 community update for quite some time now, let me share a few other news from the PineTime community!
+
+[InfiniSim](https://github.com/InfiniTimeOrg/InfiniSim), the InfiniTime simulator, recently got a UI update that makes the status window much easier to understand : it displays the status of the (simulated) BLE connection, display brightness, charger, battery and alarm.
+
+![infinisim-ui.gif](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/infinisim-ui.gif)
+
+[ITD, the InfiniTime daemon](https://gitea.elara.ws/Elara6331/itd) also got a nice update in version [1.1.0](https://gitea.elara.ws/Elara6331/itd/releases/tag/v1.1.0) which, among other things, brings a new UI theme, an improved protocol between the daemon and the clients and the support for FUSE. This new feature is quite amazing in my opinion : it allows you to mount the file system of your PineTime into your computer file system. You can now browse the content of the 4MB external memory using your file explorer, for example!
+
+![itd_fuse.png](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/itd_fuse.png)
+
+Ayke is not only working on power optimizations : they are building [a new firmware written in Go](https://github.com/aykevl/things/tree/master/watch) . They focus on power usage obviously, and also on fast and responsive UI. The project is at its very beginning, [but it's already very promising](https://hachyderm.io/@ayke/110339967077932472)!
+
+]([Ayke van Laethem: &quot;Picked up the @PINE64@fosstodon.org PineTime agai…&quot; - Hachyderm.io](https://hachyderm.io/@ayke/110339967077932472))

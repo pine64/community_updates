@@ -1,7 +1,5 @@
 Write about megi's rk2aw: https://xnux.eu/rk2aw/
 
-Infinitime 1.13: huge battery life improvements, better heart rate processing algorithm, new memory management: https://github.com/InfiniTimeOrg/InfiniTime/releases/tag/1.13.0
-
 Oren Klopfer's efforts with Ubuntu Touch on the PineTab2, PinePhone and PinePhone Pro.
 
 PineTab2 and PineTab-V releases, https://wiki.pine64.org/wiki/PineTab2_Releases and https://wiki.pine64.org/wiki/PineTab-V_Releases (and work by Icenowy?)
