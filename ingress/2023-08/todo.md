@@ -2,14 +2,6 @@ Write about megi's rk2aw: https://xnux.eu/rk2aw/
 
 PineTab2 and PineTab-V releases, https://wiki.pine64.org/wiki/PineTab2_Releases and https://wiki.pine64.org/wiki/PineTab-V_Releases (and work by Icenowy?)
 
-
-## Oren Klopfer's progress on Ubuntu Touch
-
-Another mention deserves maintainer Oren Klopfer, who is working on Ubuntu Touch support on numerous devices, including the PinePhone and PinePhone Pro, the PineTab and PineTab2.
-
-Check out the supported devices under https://devices.ubuntu-touch.io/.
-
-
 ## Rework of the community website and logo
 
 If you missed the announcement, an initial rework of the community website was announced. The announcement blog post can be read exclusively on the new beta site: https://beta.pine64.org/2023/04/13/a_new_design/
@@ -32,3 +24,22 @@ git clone https://github.com/pine64/website.git
 cd website
 hugo server
 ```
+
+
+## Various honorable mentions and software progress
+
+Aside from the main news, many developers and community members have been busy contributing their code and work. This section serves as a brief overview of a selection of projects and news within the recent past.
+
+### Progress on the PineTab2 and PineTab-V
+
+TODO
+
+### A PinePhone Pro connected to a thermal imaging camera
+
+The user *yomboprime* coupled a PinePhone Pro with the thermal imaging camera Topdon TC-001. Check out their nice video here: https://www.youtube.com/watch?v=lJhgZve9xSA
+
+### Oren Klopfer's progress on Ubuntu Touch
+
+Another mention deserves maintainer Oren Klopfer, who is working on Ubuntu Touch support on numerous devices, including the PinePhone and PinePhone Pro, the PineTab and PineTab2.
+
+Check out the supported devices under https://devices.ubuntu-touch.io/.
