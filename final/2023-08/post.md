@@ -90,7 +90,7 @@ Also missing is support for video output. This is separate from the 3D GPU, as t
 Speaking of the 3D GPU though, the RK3588's GPU is a licensed design from Arm. Collabora is working hard on adding support for it in an open-source driver in Linux, which includes writing a new kernel driver. You can read about this driver, called pancsf, in [Collabora's blog post on the matter](https://www.collabora.com/news-and-blog/news-and-events/pancsf-a-new-drm-driver-for-mali-csf-based-gpus.html). The new architecture of the Mali-G610 GPU will allow for a fully featured Vulkan driver to be written for it in the future, something older generations of Mali GPUs had to awkwardly emulate parts of.
 
 
-## InfiniTime 1.13 and other PineTime news
+## InfiniTime 1.13 and other PineTime news (by JF)
 
 The InfiniTime team released InfiniTime 1.13 at the end of June. If you haven't updated your PineTime yet, I strongly suggest you do it ASAP since it brings many nice features : new heart rate algorithm, weather integration in PineTimeStyle (PTS) watch face, new memory management, and (much) improved battery life! Let's dive into the details of this release!
 
@@ -142,4 +142,3 @@ Since we haven't been able to publish a PINE64 community update for quite some t
 
 Ayke is not only working on power optimizations : they are building [a new firmware written in Go](https://github.com/aykevl/things/tree/master/watch) . They focus on power usage obviously, and also on fast and responsive UI. The project is at its very beginning, [but it's already very promising](https://hachyderm.io/@ayke/110339967077932472)!
 
-]([Ayke van Laethem: &quot;Picked up the @PINE64@fosstodon.org PineTime agai…&quot; - Hachyderm.io](https://hachyderm.io/@ayke/110339967077932472))
