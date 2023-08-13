@@ -1,8 +1,13 @@
 Write about megi's rk2aw: https://xnux.eu/rk2aw/
 
-Oren Klopfer's efforts with Ubuntu Touch on the PineTab2, PinePhone and PinePhone Pro.
-
 PineTab2 and PineTab-V releases, https://wiki.pine64.org/wiki/PineTab2_Releases and https://wiki.pine64.org/wiki/PineTab-V_Releases (and work by Icenowy?)
+
+
+## Oren Klopfer's progress on Ubuntu Touch
+
+Another mention deserves maintainer Oren Klopfer, who is working on Ubuntu Touch support on numerous devices, including the PinePhone and PinePhone Pro, the PineTab and PineTab2.
+
+Check out the supported devices under https://devices.ubuntu-touch.io/.
 
 
 ## Rework of the community website and logo
