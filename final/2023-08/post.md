@@ -105,7 +105,7 @@ Without going into [too much details](https://github.com/InfiniTimeOrg/InfiniTim
 
 ![memory.jpg](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/memory.jpg)
 
-Pine64 advertise the PineTime with a "week-long battery life" and they are correct: the hardware is perfectly capable of achieving that. And InfiniTime isn't too far off the mark: in my use case (BLE and wrist wake option enabled), I usually need to recharge my PineTime every 3 to 5 days, and the battery life can be extended by disabling wake options and BLE.
+PINE64 advertise the PineTime with a "week-long battery life" and they are correct: the hardware is perfectly capable of achieving that. And InfiniTime isn't too far off the mark: in my use case (BLE and wrist wake option enabled), I usually need to recharge my PineTime every 3 to 5 days, and the battery life can be extended by disabling wake options and BLE.
 
 We were however pretty sure that we could achieve [better results](https://github.com/InfiniTimeOrg/InfiniTime/issues/53) with some optimizations that consist mostly in disabling most of the parts of the MCU when it's idle. 
 
@@ -121,7 +121,7 @@ Most of those changes are now integrated in InfiniTime 1.13, and a many users ha
 
 ## Other news from the PineTime community
 
-Since we haven't been able to publish a Pine64 community update for quite some time now, let me share a few other news from the PineTime community!
+Since we haven't been able to publish a PINE64 community update for quite some time now, let me share a few other news from the PineTime community!
 
 [InfiniSim](https://github.com/InfiniTimeOrg/InfiniSim), the InfiniTime simulator, recently got a UI update that makes the status window much easier to understand: it displays the status of the (simulated) BLE connection, display brightness, charger, battery and alarm.
 
