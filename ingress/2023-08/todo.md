@@ -1,5 +1,3 @@
-Write about megi's rk2aw: https://xnux.eu/rk2aw/
-
 PineTab2 and PineTab-V releases, https://wiki.pine64.org/wiki/PineTab2_Releases and https://wiki.pine64.org/wiki/PineTab-V_Releases (and work by Icenowy?)
 
 ## Rework of the community website and logo

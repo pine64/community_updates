@@ -13,6 +13,7 @@ N.B. Comments on the blog post need to be in English and follow our [Community R
     * Community updates are now written collaboratively by several members of the community
     * The public is invited to contribute to the monthly update posts
 * Newsflash
+    * megi released rk2aw: a loader for your bootloader
 * Quartz64 and SOQuartz
     * U-Boot improvements thanks to Kwiboo and CounterPillow: USB, NVMe, and soon PXE
     * Improved SOQuartz CM4 baseboard compatibility
@@ -40,6 +41,13 @@ Going forward, these monthly community update posts will be written collaborativ
 The plan is to have a post out on the 15th of every month. Whether or not this deadline will be met each month is another question, but now you can keep an eye on what's happening behind the curtains and help out if necessary.
 
 Speaking of deadlines, this update didn't have a very long time in the proverbial oven despite the long period of silence preceding it, so it may be a little short or not cover all developments in the community equally well. Just because something is not covered in this post doesn't mean it hasn't been worked on.
+
+
+## Newsflash
+
+First up, long-time contributor megi [has released rk2aw](https://xnux.eu/rk2aw/), a sort of bootloader for your bootloader on Rockchip-based platforms. Instead of having to deal with the default boot order of SPI to eMMC to SD, rk2aw sits in your SPI flash and changes the order to prefer the SD card for booting from first, which is more tinkerer-friendly. Additionally, a simple LED flashing and button interface allows the user to choose which storage device the bootloader should be loaded from. The software also comes with some nifty additional features, like suppressing power-on when the PinePhone Pro is plugged in.
+
+Of PINE64's devices, rk2aw supports the PinePhone Pro, Pinebook Pro, PineTab 2, QuartzPro64, Quartz64 Model A and ROCKPro64, though it can theoretically be made to work on any RK3399/RK3566/RK3588-based device.
 
 
 ## Quartz64 and SOQuartz

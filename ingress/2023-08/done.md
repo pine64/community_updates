@@ -8,6 +8,8 @@ Talk about the new way community updates are written, who's involved, etc. Link 
 
 JF wrote about the large amount of updates that have occured over the months from the last community update to the PineTime and it's firmware InfiniTime. Things like heart rate monitoring, memory management, battery life, InfiniSim and ITD had major updates during this time. Along with Ayke starting development on their own firmware
 
+Write about megi's rk2aw: https://xnux.eu/rk2aw/
+
 ## QuartzPro64
 
 * Collabora's mainlining efforts on RK3588
