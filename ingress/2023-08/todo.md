@@ -23,14 +23,19 @@ cd website
 hugo server
 ```
 
-
 ## Various honorable mentions and software progress
 
 Aside from the main news, many developers and community members have been busy contributing their code and work. This section serves as a brief overview of a selection of projects and news within the recent past.
 
 ### Progress on the PineTab2 and PineTab-V
 
-TODO
+Since the PineTab2 and PineTab-V tablets have been shipped, the community has been tirelessly at work, propelling the software landscape forward and unveiling an array of new software and bootable images for both tablet models.
+
+The [software releases section of the PineTab2](https://wiki.pine64.org/wiki/PineTab2_Releases) already lists Arch Linux ARM, Mobian, NixOS, postmarketOS, Rhino Linux, Ubuntu Touch and others, with more to come. The [software releases section of the PineTab-V](https://wiki.pine64.org/wiki/PineTab-V_Releases) lists a Gentoo overlay, as well as a KDE Plasma Yocto build from the community member Fishwaldo, with even more in the pipeline.
+
+There is also progress on the WiFi driver of the PineTab2. Some releases already ship with an initial support for the on-board WiFi chip. It is however important to note that the work on the driver is ongoing and has not reached a software maturity yet. 
+
+These software releases are a testament to the vibrant collaboration within the PINE64 community. Developers, enthusiasts, and users alike have come together to cultivate a thriving ecosystem that empowers PineTab2 and PineTab-V users with an array of choices. 
 
 ### A PinePhone Pro connected to a thermal imaging camera
 
