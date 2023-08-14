@@ -92,7 +92,7 @@ Speaking of the 3D GPU though, the RK3588's GPU is a licensed design from Arm. C
 
 ## InfiniTime 1.13 and other PineTime news (by JF)
 
-The InfiniTime team released InfiniTime 1.13 at the end of June. If you haven't updated your PineTime yet, I strongly suggest you do it ASAP since it brings many nice features : new heart rate algorithm, weather integration in PineTimeStyle (PTS) watch face, new memory management, and (much) improved battery life! Let's dive into the details of this release!
+The InfiniTime team released InfiniTime 1.13 at the end of June. If you haven't updated your PineTime yet, I strongly suggest you do it ASAP since it brings many nice features: a new heart rate algorithm, weather integration in PineTimeStyle (PTS) watch face, new memory management, and a (much) improved battery life! Let's dive into the details of this release!
 
 The heart rate sensor is integrated in InfiniTime for quite some time now (since [0.11.0](https://github.com/InfiniTimeOrg/InfiniTime/releases/tag/0.11.0), actually). It worked but fine but... we had the feeling that it could work better if someone had the opportunity to have a look at the code. [Ceimour](https://github.com/Ceimour) did a great job redesigning and mostly rewriting the whole heart rate processing algorithm. I'm not experienced enough in digital signal processing to explain all the internals of this new algorithm, so, if you are interested in the details, please see the explanations Ceimour provided in the PR [here](https://github.com/InfiniTimeOrg/InfiniTime/pull/1486#issuecomment-1353695831https://github.com/InfiniTimeOrg/InfiniTime/pull/1486#issuecomment-1353695831) and [here](https://github.com/InfiniTimeOrg/InfiniTime/pull/1486#issuecomment-1377673396). All in all, it now takes less time to display the first measurements, and they are now updated much faster than previously. 
 
@@ -140,5 +140,5 @@ Since we haven't been able to publish a PINE64 community update for quite some t
 
 ![itd_fuse.png](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/itd_fuse.png)
 
-Ayke is not only working on power optimizations : they are building [a new firmware written in Go](https://github.com/aykevl/things/tree/master/watch) . They focus on power usage obviously, and also on fast and responsive UI. The project is at its very beginning, [but it's already very promising](https://hachyderm.io/@ayke/110339967077932472)!
+Ayke is not only working on power optimizations : they are building [a new firmware written in Go](https://github.com/aykevl/things/tree/master/watch). They focus on power usage obviously, and also on fast and responsive UI. The project is at its very beginning, [but it's already very promising](https://hachyderm.io/@ayke/110339967077932472)!
 
