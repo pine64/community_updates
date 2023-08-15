@@ -4,6 +4,8 @@ We apologize for the lack of regular community updates during the past few month
 
 Let's talk about it, and about so much more of what's been happening.
 
+This community update consists of contributions by Caffeine, CounterPillow, Funeral, gamiee, JF002, and mpreditor.
+
 N.B. Comments on the blog post need to be in English and follow our [Community Rules and Code of Conduct](https://forum.pine64.org/showthread.php?tid=13209).
 
 
