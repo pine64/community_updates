@@ -39,3 +39,7 @@ Mention that this is paving the way for future RK3588-based Pine products.
 * InfiniSim UI update
 * Improvements to ITD, the InfiniTime daemon
 * Ayke is developing a brand new firmware for the PineTime
+
+## PineTab2 and PineTab-V releases
+## Rework of the community website and logo
+## Various honorable mentions and software progress
