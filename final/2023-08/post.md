@@ -15,6 +15,9 @@ N.B. Comments on the blog post need to be in English and follow our [Community R
     * Rework of the community website and logo
 * Newsflash
     * megi released rk2aw: a loader for your bootloader
+    * Progress on the PineTab2 and PineTab-V
+    * A PinePhone Pro connected to a thermal imaging camera
+    * Oren Klopfer's progress on Ubuntu Touch
 * Quartz64 and SOQuartz
     * U-Boot improvements thanks to Kwiboo and CounterPillow: USB, NVMe, and soon PXE
     * Improved SOQuartz CM4 baseboard compatibility
@@ -31,10 +34,6 @@ N.B. Comments on the blog post need to be in English and follow our [Community R
     * InfiniSim UI update
     * Improvements to ITD, the InfiniTime daemon
     * Ayke is developing a brand new firmware for the PineTime
-* Various honorable mentions and software progress
-    * Progress on the PineTab2 and PineTab-V
-    * A PinePhone Pro connected to a thermal imaging camera
-    * Oren Klopfer's progress on Ubuntu Touch
 
 
 ## Housekeeping
@@ -72,9 +71,31 @@ hugo server
 
 ## Newsflash
 
+### megi released rk2aw: a loader for your bootloader
+
 First up, long-time contributor megi [has released rk2aw](https://xnux.eu/rk2aw/), a sort of bootloader for your bootloader on Rockchip-based platforms. Instead of having to deal with the default boot order of SPI to eMMC to SD, rk2aw sits in your SPI flash and changes the order to prefer the SD card for booting from first, which is more tinkerer-friendly. Additionally, a simple LED flashing and button interface allows the user to choose which storage device the bootloader should be loaded from. The software also comes with some nifty additional features, like suppressing power-on when the PinePhone Pro is plugged in.
 
 Of PINE64's devices, rk2aw supports the PinePhone Pro, Pinebook Pro, PineTab 2, QuartzPro64, Quartz64 Model A and ROCKPro64, though it can theoretically be made to work on any RK3399/RK3566/RK3588-based device.
+
+### Progress on the PineTab2 and PineTab-V
+
+Since the PineTab2 and PineTab-V tablets have been shipped, the community has been tirelessly at work, propelling the software landscape forward and unveiling an array of new software and bootable images for both tablet models.
+
+The [software releases section of the PineTab2](https://wiki.pine64.org/wiki/PineTab2_Releases) already lists Arch Linux ARM, Mobian, NixOS, postmarketOS, Rhino Linux, Ubuntu Touch and others, with more to come. The [software releases section of the PineTab-V](https://wiki.pine64.org/wiki/PineTab-V_Releases) lists a Gentoo overlay, as well as a KDE Plasma Yocto build from the community member Fishwaldo, with even more in the pipeline.
+
+There is also progress on the WiFi driver of the PineTab2. Some releases already ship with an initial support for the on-board WiFi chip. It is however important to note that the work on the driver is ongoing and has not reached a software maturity yet. 
+
+These software releases are a testament to the vibrant collaboration within the PINE64 community. Developers, enthusiasts, and users alike have come together to cultivate a thriving ecosystem that empowers PineTab2 and PineTab-V users with an array of choices. 
+
+### A PinePhone Pro connected to a thermal imaging camera
+
+The user *yomboprime* coupled a PinePhone Pro with the thermal imaging camera Topdon TC-001. Check out their nice video here: https://www.youtube.com/watch?v=lJhgZve9xSA
+
+### Oren Klopfer's progress on Ubuntu Touch
+
+Another mention deserves maintainer Oren Klopfer, who is working on Ubuntu Touch support on numerous devices, including the PinePhone and PinePhone Pro, the PineTab and PineTab2.
+
+Check out the supported devices under https://devices.ubuntu-touch.io/.
 
 
 ## Quartz64 and SOQuartz
@@ -168,27 +189,3 @@ Since we haven't been able to publish a PINE64 community update for quite some t
 ![itd_fuse.png](https://github.com/pine64/community_updates/blob/main/final/2023-08/images/itd_fuse.png)
 
 Ayke is not only working on power optimizations : they are building [a new firmware written in Go](https://github.com/aykevl/things/tree/master/watch). They focus on power usage obviously, and also on fast and responsive UI. The project is at its very beginning, [but it's already very promising](https://hachyderm.io/@ayke/110339967077932472)!
-
-## Various honorable mentions and software progress
-
-Aside from the main news, many developers and community members have been busy contributing their code and work. This section serves as a brief overview of a selection of projects and news within the recent past.
-
-### Progress on the PineTab2 and PineTab-V
-
-Since the PineTab2 and PineTab-V tablets have been shipped, the community has been tirelessly at work, propelling the software landscape forward and unveiling an array of new software and bootable images for both tablet models.
-
-The [software releases section of the PineTab2](https://wiki.pine64.org/wiki/PineTab2_Releases) already lists Arch Linux ARM, Mobian, NixOS, postmarketOS, Rhino Linux, Ubuntu Touch and others, with more to come. The [software releases section of the PineTab-V](https://wiki.pine64.org/wiki/PineTab-V_Releases) lists a Gentoo overlay, as well as a KDE Plasma Yocto build from the community member Fishwaldo, with even more in the pipeline.
-
-There is also progress on the WiFi driver of the PineTab2. Some releases already ship with an initial support for the on-board WiFi chip. It is however important to note that the work on the driver is ongoing and has not reached a software maturity yet. 
-
-These software releases are a testament to the vibrant collaboration within the PINE64 community. Developers, enthusiasts, and users alike have come together to cultivate a thriving ecosystem that empowers PineTab2 and PineTab-V users with an array of choices. 
-
-### A PinePhone Pro connected to a thermal imaging camera
-
-The user *yomboprime* coupled a PinePhone Pro with the thermal imaging camera Topdon TC-001. Check out their nice video here: https://www.youtube.com/watch?v=lJhgZve9xSA
-
-### Oren Klopfer's progress on Ubuntu Touch
-
-Another mention deserves maintainer Oren Klopfer, who is working on Ubuntu Touch support on numerous devices, including the PinePhone and PinePhone Pro, the PineTab and PineTab2.
-
-Check out the supported devices under https://devices.ubuntu-touch.io/.
