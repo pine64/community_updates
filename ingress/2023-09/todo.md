@@ -5,3 +5,4 @@
 ![InfiniTime-es - Settings](images/InfiniTime-es-settings.png) ![InfiniTime-es - Heart rate](images/InfiniTime-es-hr.png) ![InfiniTime-es - License](images/InfiniTime-es-license.png) ![InfiniTime-es - Navigation](images/InfiniTime-es-navigation.png) ![InfiniTime-es - Steps](images/InfiniTime-es-steps.png)
 
 - A nice article about the PineTime, InfiniTime and WaspOS on LWN : [PineTime: a smartwatch for open-source software](https://lwn.net/Articles/941796/). The article will be available for free without subscription from August 31.
+- User [snowcatridge10](https://codeberg.org/snowcatridge10) [announced recently](https://github.com/InfiniTimeOrg/InfiniTime/issues/1221#issuecomment-1710762392) that they started working on a Windows companion app for PineTime running InfiniTime : [InfiniConnect](https://codeberg.org/InfiniTime-Tools/InfiniConnect).
